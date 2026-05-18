@@ -1,90 +1,57 @@
 # 🚨 Smart Prison Surveillance System
 
-![Status](https://img.shields.io/badge/status-en%20cours-yellow)
-
 ![Python](https://img.shields.io/badge/Python-3.10-blue)
-
 ![YOLO](https://img.shields.io/badge/YOLO-v8-red)
-
+![Streamlit](https://img.shields.io/badge/Streamlit-1.28-ff4b4b)
 ![License](https://img.shields.io/badge/License-MIT-green)
 
 ## 📌 Présentation
 
 Système de surveillance intelligent pour établissements pénitentiaires utilisant la **vision par ordinateur** pour détecter automatiquement :
 
-- 🔪 **Armes blanches** (couteaux)
-  
-- 🔫 **Armes à feu** (pistolets)
-  
-- 🚶 **Intrusions** en zones interdites
-  
-- 📸 **Alertes visuelles** avec captures d'écran
-
-## 🎯 Problématique
-
-Les prisons manquent de systèmes automatisés pour détecter rapidement :
-
-- L'introduction d'armes
-  
-- Les intrusions dans les zones sensibles
-  
-- Les comportements suspects
-
-**Solution** : Un système IA qui analyse les flux vidéo en temps réel et déclenche des alertes automatiques.
-
----
+| Fonctionnalité | Statut |
+|----------------|--------|
+| 🔪 Détection d'armes (couteaux/pistolets) | ✅ Implémenté |
+| 🚶 Détection d'intrusions en zone interdite | ✅ Implémenté |
+| 📸 Alertes visuelles avec captures | ✅ Implémenté |
+| 📊 Dashboard interactif | ✅ Implémenté |
+| 🎬 Analyse vidéo avec annotations | ✅ Implémenté |
 
 ## 🛠️ Stack technique
 
 | Catégorie | Technologies |
 |-----------|--------------|
-| **IA & Computer Vision** | YOLOv8, PyTorch, OpenCV |
-
+| **IA & CV** | YOLOv8, PyTorch, OpenCV |
 | **Backend** | Python, FastAPI |
-
 | **Frontend** | Streamlit, Gradio |
-
 | **Entraînement** | Google Colab (GPU Tesla T4) |
-
-| **Versionnement** | Git, GitHub |
-
----
 
 ## 📊 Résultats obtenus
 
-### Détection d'armes
-
-| Frame | Objet détecté | Confiance |
-|-------|---------------|-----------|
+### Détections d'armes
+| Frame | Objet | Confiance |
+|-------|-------|-----------|
 | 22 | Couteau | 87% |
 | 59 | Couteau | 82% |
 | 180 | Couteau | 91% |
 | 184-186 | Couteau | 85-89% |
 
-### Détection d'intrusion
-
+### Détections d'intrusion
 | Frames | Événement |
 |--------|-----------|
-| 41-42 | Intrusion en zone interdite |
-| 65-66 | Intrusion en zone interdite |
-| 660-669 | Intrusion en zone interdite |
-| 678 | Intrusion en zone interdite |
+| 41-42 | Intrusion zone interdite |
+| 65-66 | Intrusion zone interdite |
+| 660-669 | Intrusion zone interdite |
 
-### Métriques globales
-
-| Métrique | Valeur |
-|----------|--------|
-| Précision détection | >85% |
-| Temps d'inférence | ~42ms/frame |
-| Dataset | 141 images annotées |
-| Frames analysées | 987 par vidéo |
-
----
-
-## 🚀 Installation et utilisation
-
-### Prérequis
+## 🚀 Installation rapide
 
 ```bash
-Python 3.10+
+# Cloner le projet
+git clone https://github.com/Assamoi15/smart-prison-surveillance.git
+cd smart-prison-surveillance
+
+# Installer les dépendances
 pip install -r requirements.txt
+
+# Lancer le dashboard
+streamlit run frontend/dashboard.py
