@@ -55,3 +55,34 @@ pip install -r requirements.txt
 
 # Lancer le dashboard
 streamlit run frontend/dashboard.py
+
+📁 Structure du projet
+
+smart-prison-surveillance/
+├── frontend/
+│   ├── dashboard.py      # Dashboard Streamlit
+│   └── gradio_app.py     # Interface Gradio
+├── backend/
+│   └── api.py            # API FastAPI
+├── ai/
+│   ├── models/           # Modèles entraînés
+│   └── datasets/         # Dataset YOLO
+├── alerts/               # Captures d'alertes
+├── videos/               # Vidéos annotées
+├── requirements.txt
+└── README.md
+
+🔄 Améliorations futures
+
+Détection de bagarres (CNN + LSTM)
+
+Tracking des détenus (DeepSORT)
+
+Alertes temps réel (Telegram)
+
+Dashboard React
+
+👤 Auteur
+Assamoi15
+
+GitHub : @Assamoi15
