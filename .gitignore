@@ -1,0 +1,4 @@
+
+# Notebooks (trop gros)
+*.ipynb
+ai/notebooks/*.ipynb
